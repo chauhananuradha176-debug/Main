@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<title> Your Cart </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<style>
+a:hover{
+color:Red;
+transition: color 0.4s ease-in-out;
+background-color: white;
+border-radius: 50%;
+outline: 2px solid grey;
+display: flex;
+width: 100px;
+height: 50px;
+}
+a{
+font-family: Open Sans;
+font-weight: 700;
+text-decoration: purple underline;
+transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+#Items{
+font-family: "Inter";
+font-weight: Bold;
+background-color: #90EE90;
+outline: 3px solid black;
+border-radius: 24px;
+display: inline-block;
+}
+body{
+background-color: #FFE5B4;
+cursor: url('handgrabbing.png'), auto;
+}
+#Cart-text{
+background-color: white;
+display: inline-bock;
+border-style: inset;
+}
+</style>
+<body>
+<h2 id="Cart-text"> Your items ⬇️</h2>
+<h4 id="Items"> Place-Holder Text </h4>
+
+<script>
+    // 1. Create a list (array) of the three sentence options
+    const messages = [
+        "Branded Cycle 🚲",
+        "Professional Football ⚽",
+        "Branded Cycle 🚲 And Professional Football ⚽"
+    ];
+
+    // 2. Generate a random index number between 0 and 2
+    const randomIndex = Math.floor(Math.random() * messages.length);
+
+    // 3. Find the h2 element on the page and swap its text with the randomly chosen message
+    document.getElementById("Items").textContent = messages[randomIndex];
+</script><br>
+<a href="Official.html"> Go Back⬅️  </a>
+<br>
+</body>
+</html>

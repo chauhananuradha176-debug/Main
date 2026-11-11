@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title> Your Account </title>
+</head>
+<style>
+body{
+cursor: url('handpointing.png'), auto;
+}
+#Account-text{
+color: #2B6CB0;
+}
+</style>
+<body>
+<h2 id="Account-text"> Your Account In Amazon </h2>
+<hr>
+<h3 id="History"> Your Shopping History </h3>
+<br>
+<h3 id="History2"> Blah Blah Blah </h3>
+
+<script>
+    // 1. Create a list (array) of the three sentence options
+    const messages = [
+        "Professional Football ⚽",
+        "Branded Cycle 🚲",
+        "Professional Football ⚽ And Branded Cycle 🚲"
+    ];
+
+    // 2. Generate a random index number between 0 and 2
+    const randomIndex = Math.floor(Math.random() * messages.length);
+
+    // 3. Find the h2 element on the page and swap its text with the randomly chosen message
+    document.getElementById("History2").textContent = messages[randomIndex];
+</script>
+<a href="Policy.html">  Read About How We Use Your Data In The Privacy Policy Section </a>
+<a href="Official.html">  <br>⬅️Go Back </a>
+<h3 id="Yes"> Email= "abcdefg@gmail.com" </h3>
+<br>
+<h3 id="No"> Mobile Number= "1234567890" </h3>
+<br>
+<h3 id="Maybe"> Address= "Haryana" </h3>
+<h3 id="Uhhhh"> Password= "12345678"  </h3>
+
+
+
+
+
+
+
+

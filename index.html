@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete CSS Grid Layout Website</title>
+  <style>
+    /* 1. Global Resets & Variables */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --primary-color: #2c3e50;
+      --accent-color: #3498db;
+      --text-color: #333333;
+      --border-color: #e2e8f0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      cursor: url('handpointing.png'), auto;
+    }
+    /* 2. The Main Page Grid Layout */
+    .page-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      grid-template-rows: 70px 1fr auto;
+      grid-template-areas: 
+        "header header" 
+        "sidebar main" 
+        "footer footer";
+      min-height: 100vh;
+    }
+    /* 3. Assigning Elements to Grid Areas */
+    .site-header {
+      grid-area: header;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-sidebar {
+      grid-area: sidebar;
+      background-color: #ffffff;
+      border-right: 1px solid var(--border-color);
+      padding: 24px;
+    }
+    .site-main {
+      grid-area: main;
+      padding: 32px;
+    }
+    .site-footer {
+      grid-area: footer;
+      background-color: var(--primary-color);
+      color: #a0aec0;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 4px solid var(--accent-color);
+    }
+    /* 4. Inside the Main Content: A Responsive Card Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+    /* 5. Styling Component Details */
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-left: 500px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+    #search-form {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #label {
+      color: #ffffff;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    #query-input {
+      padding: 6px 12px;
+      font-size: 13px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      outline: none;
+    }
+    #Button-no-4 {
+      padding: 6px 12px;
+      font-size: 13px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #Button-no-4:hover {
+      background-color: #2980b9;
+    }
+    .sidebar-menu {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .sidebar-menu li {
+      margin-bottom: 12px;
+    }
+    .sidebar-menu a {
+      color: var(--text-color);
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .sidebar-menu a:hover, 
+    .sidebar-menu a.active {
+      background-color: #edf2f7;
+      color: var(--accent-color);
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+       cursor: url('icons8-zoom-in-35.png'), auto;
+
+    }
+    .card h3 {
+      margin-bottom: 12px;
+      color: var(--primary-color);
+    }
+    /* 6. Making the Layout Responsive for Mobile Screens */
+    @media (max-width: 768px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: 
+          "header" 
+          "sidebar" 
+          "main" 
+          "footer";
+      }
+      .site-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px;
+      }
+      .sidebar-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 0;
+        cursor: url('handpointing.png'), auto;
+      }
+      .sidebar-menu li {
+        margin-bottom: 0;
+        cursor: url('handpointing.png'), auto;
+
+      }
+      .site-main {
+        padding: 20px;
+      }
+    }
+      #Look{
+      margin-left: 250px;
+}
+#yes{
+margin-left: 0px;
+}
+  </style>
+</head>
+<body>
+  <div class="page-layout">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="logo">Amazon In India</div>
+      <ul class="nav-links">
+        <li>
+       
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside class="site-sidebar">
+      <h2>Navigation</h2>
+      <ul title="" class="sidebar-menu">
+        <li title=""><a href="Amazon.html">Sign In</a></li>
+        <li title=""><a href="Official.html">Home</a></li>
+        <li title=""><a href="Account.html">Account</a></li>
+        <li title=""><a href="Cart.html">My Cart</a></li>
+        <li title=""><a href="Policy.html">Terms Of Use</a></li>
+        <li title=""><a href="Banned.html">Opt-Out</a></li>
+      </ul>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="site-main">
+      <h1>Welcome To The Online Shopping Center</h1>
+      <br>
+<h3 id="Look"> Take a look At What We Offer </h3>
+      <!-- Nested Cards Grid -->
+      <div class="content-grid">
+        <div class="card">
+          <h3>Three Products</h3>
+          <p>Each with Their Own Varieties, Reviews, And Ratings. A detailed insight. </p>
+        </div>
+        <div class="card">
+          <h3>Specific Details</h3>
+          <p>Every Product Contains Its Own Overall Rating, 0 To 5 Stars, Review, From our Customers And Varieties in colors and patterns.</p>
+        </div>
+        <div class="card">
+          <h3> Your Account And Privacy Policy</h3>
+          <p>Features Account Details And Our Terms Of Use.</p>
+        </div>
+        <div class="card">
+          <h3>Easy To Access Opt-Out</h3>
+          <p>Any User Can Instantly Opt-out whenever they please.</p>
+        </div>
+      </div>
+    </main>
+<h2> 
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p id="yes">&copy Built For Easy Access To Our Services.</p>
+    </footer>
+  </div>
+</body>
+</html>
